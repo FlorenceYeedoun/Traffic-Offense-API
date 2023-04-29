@@ -10,13 +10,20 @@ make
  */
 
 import { Schema, model } from "mongoose"
+
 const vehicleSchema = new Schema({
     number_plate: {
-
-    },
-    driver: {
         type: String,
         required: [true, 'Number plate required'],
+        trim: true
+
+
+    },
+
+    driver: {
+        type: Schema.Types.ObjectId,
+        ref: "Driver",
+        required: [true, 'Driver required'],
         trim: true
 
     },
