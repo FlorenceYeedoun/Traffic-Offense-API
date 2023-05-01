@@ -52,12 +52,12 @@ const driverSchema = new Schema({
             required: [true, 'City required'],
             trim: true
         },
-        addressLine1: {
+        address_line_1: {
             type: String,
             required: [true, 'addressLine1 required'],
             trim: true
         },
-        addressLine2: {
+        address_line_2: {
             type: String,
             trim: true
         },
